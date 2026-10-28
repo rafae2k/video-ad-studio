@@ -4,16 +4,16 @@ Estúdio local para organizar **ideias → variações → versões finais** e c
 
 ## Exemplo
 
-Corte, ritmo e legendas sobre fala gravada — à esquerda o vídeo original (raw, 4min14), à direita a edição v1 (1min02) com cortes guiados pela transcrição e legendas queimadas, feita com o backend FFmpeg:
+Fala gravada transformada em anúncio — à esquerda o vídeo original (raw, 4min14), à direita a edição v5 (57 s): cortes guiados pela transcrição, recorte da pessoa (máscaras RVM) com fundo trocado e letreiros atrás dela, clipes gerados por IA, packshot e CTA. Feita com um compositor Python próprio (Pillow/OpenCV/NumPy + FFmpeg), não com Remotion; é um draft, não uma peça final aprovada.
 
 <table>
   <tr>
     <th>Original (raw)</th>
-    <th>Editado (v1)</th>
+    <th>Editado (v5)</th>
   </tr>
   <tr>
     <td><video src="https://github.com/user-attachments/assets/cfc0e8fe-be36-426f-8ec2-4be274717905" controls width="300"></video></td>
-    <td><video src="https://github.com/user-attachments/assets/51f5c96a-e5b6-46b4-b0aa-59d10a248e9a" controls width="300"></video></td>
+    <td><video src="https://github.com/user-attachments/assets/f5cd2ba1-9474-4a02-8df2-fd8719f955c8" controls width="300"></video></td>
   </tr>
 </table>
 
