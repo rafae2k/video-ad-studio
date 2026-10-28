@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "sfx-whoosh",
+      "kind": "audio",
+      "path": "sfx/whoosh.wav",
+      "sha256": "ac0886590fbf9b9d6ca1cac9d6416d1f6cb84a27b108094cd6d39ec8c5f0d2d0",
+      "provenance": {
+        "type": "procedural",
+        "generator": "packages/video/sfx.js",
+        "seed": 42
+      },
+      "rights": {
+        "status": "original",
+        "license": "project-owned-original; no third-party samples"
+      }
+    },
+    {
+      "id": "sfx-pop",
+      "kind": "audio",
+      "path": "sfx/pop.wav",
+      "sha256": "4b8dfa56d30a37606a6eb651f8133a379499ab357877d33f2cd7ed5fcc7fd1dc",
+      "provenance": {
+        "type": "procedural",
+        "generator": "packages/video/sfx.js",
+        "seed": 42
+      },
+      "rights": {
+        "status": "original",
+        "license": "project-owned-original; no third-party samples"
+      }
+    },
+    {
+      "id": "sfx-click",
+      "kind": "audio",
+      "path": "sfx/click.wav",
+      "sha256": "8eb0c9a3e716329ea56250b2a2476999fa67b6a6bdde03a36444429419e79424",
+      "provenance": {
+        "type": "procedural",
+        "generator": "packages/video/sfx.js",
+        "seed": 42
+      },
+      "rights": {
+        "status": "original",
+        "license": "project-owned-original; no third-party samples"
+      }
+    },
+    {
+      "id": "sfx-impact",
+      "kind": "audio",
+      "path": "sfx/impact.wav",
+      "sha256": "f87f1caf578a7b1a4a563e2a2b5bdee3dd6cf5ee2ea487e05fc0e552ba37afd7",
+      "provenance": {
+        "type": "procedural",
+        "generator": "packages/video/sfx.js",
+        "seed": 42
+      },
+      "rights": {
+        "status": "original",
+        "license": "project-owned-original; no third-party samples"
+      }
+    },
+    {
+      "id": "sfx-riser",
+      "kind": "audio",
+      "path": "sfx/riser.wav",
+      "sha256": "7ebcd6536ee1db67dec1eff907573a510e99a1ff08addf4a42cd32a0ced18810",
+      "provenance": {
+        "type": "procedural",
+        "generator": "packages/video/sfx.js",
+        "seed": 42
+      },
+      "rights": {
+        "status": "original",
+        "license": "project-owned-original; no third-party samples"
+      }
+    },
+    {
+      "id": "sfx-chime",
+      "kind": "audio",
+      "path": "sfx/chime.wav",
+      "sha256": "6aff7de0b69abbfe3bc5d56c4050eba9f7cd354eff77321a70abf228af00abcf",
+      "provenance": {
+        "type": "procedural",
+        "generator": "packages/video/sfx.js",
+        "seed": 42
+      },
+      "rights": {
+        "status": "original",
+        "license": "project-owned-original; no third-party samples"
+      }
+    }
+  ]
+}

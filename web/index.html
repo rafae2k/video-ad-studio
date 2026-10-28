@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#111412" />
+    <title>Frame — Creative Studio</title>
+    <link rel="stylesheet" href="/web/style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="#ideas"
+        ><span class="brand-symbol">f.</span
+        ><span>frame<span class="brand-sub">CREATIVE STUDIO</span></span></a
+      >
+      <div class="workspace">
+        <span class="workspace-icon">F</span>
+        <div>Workspace Frame<small>Estúdio local</small></div>
+        <span class="dot"></span>
+      </div>
+      <p class="nav-caption">CRIAÇÃO</p>
+      <nav aria-label="Navegação principal">
+        <a href="#ideas" data-nav="ideas"
+          ><span>◈</span> Ideias <b id="idea-count">3</b></a
+        ><a href="#variants" data-nav="variants"
+          ><span>▧</span> Variações <b id="variant-count">0</b></a
+        ><a href="#finals" data-nav="finals"><span>▣</span> Versões finais</a>
+        <p class="nav-caption">REPERTÓRIO</p>
+        <a href="#library" data-nav="library"
+          ><span>▦</span> Referências <b>16</b></a
+        ><a href="#workflow" data-nav="workflow"
+          ><span>⌘</span> Fluxo de produção</a
+        >
+      </nav>
+      <div class="sidebar-bottom">
+        <span class="local-dot"></span> Salvo neste navegador<button
+          id="export"
+          aria-label="Exportar projeto"
+          title="Exportar projeto JSON"
+        >
+          ↗
+        </button>
+      </div>
+    </aside>
+    <div class="app">
+      <header class="topbar">
+        <span
+          >Workspace <span class="crumb">/</span>
+          <strong id="breadcrumb">Ideias</strong></span
+        >
+        <div class="top-actions">
+          <span class="demo-label">PROJETO DE EXEMPLO</span
+          ><button class="avatar" title="Workspace local">F</button>
+        </div>
+      </header>
+      <main id="main"></main>
+      <footer>
+        Uma boa ideia merece uma boa execução.<span
+          >FRAME CREATIVE STUDIO · LOCAL</span
+        >
+      </footer>
+    </div>
+    <dialog id="editor">
+      <form method="dialog" id="idea-form">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">DO INSIGHT AO PRIMEIRO FRAME</p>
+            <h2>Nova ideia</h2>
+          </div>
+          <button
+            class="icon-button"
+            value="cancel"
+            formnovalidate
+            aria-label="Fechar"
+          >
+            ×
+          </button>
+        </div>
+        <label
+          >Nome da ideia<input
+            name="title"
+            required
+            maxlength="90"
+            placeholder="Ex.: Um ritual que cabe na sua manhã" /></label
+        ><label
+          >Hook de abertura<textarea
+            name="hook"
+            required
+            maxlength="280"
+            placeholder="O que faz alguém parar nos primeiros 3 segundos?"
+          ></textarea>
+        </label>
+        <div class="form-row">
+          <label
+            >Direção visual<select name="style">
+              <option>Legendas cinéticas</option>
+              <option>Foto com profundidade</option>
+              <option>Colagem editorial</option>
+            </select></label
+          ><label
+            >Duração<select name="duration">
+              <option>15</option>
+              <option>30</option>
+              <option>6</option>
+            </select></label
+          >
+        </div>
+        <label
+          >Nota de produção<textarea
+            name="note"
+            maxlength="500"
+            placeholder="Assets, cenas ou cuidados para executar a ideia"
+          ></textarea></label
+        ><button class="button primary" id="save-idea" value="save">
+          Criar ideia <span>↗</span>
+        </button>
+      </form>
+    </dialog>
+    <dialog id="detail"></dialog>
+    <div role="status" class="toast" id="toast"></div>
+    <script type="module" src="/web/app.js"></script>
+  </body>
+</html>

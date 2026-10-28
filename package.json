@@ -1,0 +1,14 @@
+{
+  "name": "video-editor-workbench",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "project:new": "node scripts/new-project.mjs",
+    "check:server": "node --test scripts/dev-server.test.mjs",
+    "check": "node --check web/app.js && node --test scripts/*.test.mjs web/*.test.mjs && npm --prefix packages/video test",
+    "remotion:studio": "npm --prefix packages/remotion run studio",
+    "remotion:render": "node packages/remotion/render-v2.mjs",
+    "remotion:check": "npm --prefix packages/remotion run check"
+  }
+}

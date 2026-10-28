@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "studio-demo-square",
+  "title": "Variação quadrada",
+  "width": 1080,
+  "height": 1080,
+  "fps": 30,
+  "duration": 9,
+  "background": "#101820",
+  "accent": "#ba9cff",
+  "layers": [
+    {
+      "id": "hook",
+      "type": "title",
+      "start": 0,
+      "duration": 3,
+      "text": "Qual ideia vem agora?",
+      "x": 0.5,
+      "y": 0.34,
+      "w": 0.84,
+      "h": 0.25,
+      "effect": "slide_up"
+    },
+    {
+      "id": "circle",
+      "type": "annotation_circle",
+      "start": 0.6,
+      "duration": 2.4,
+      "x": 0.5,
+      "y": 0.44,
+      "w": 0.73,
+      "h": 0.1
+    },
+    {
+      "id": "body",
+      "type": "stat",
+      "start": 3,
+      "duration": 3,
+      "text": "3 formatos",
+      "x": 0.5,
+      "y": 0.33,
+      "w": 0.84,
+      "h": 0.2,
+      "effect": "pop"
+    },
+    {
+      "id": "caption",
+      "type": "caption",
+      "start": 3,
+      "duration": 3,
+      "x": 0.5,
+      "y": 0.52,
+      "w": 0.8,
+      "h": 0.09,
+      "words": [
+        {
+          "text": "Uma biblioteca.",
+          "start": 0,
+          "end": 1.4
+        },
+        {
+          "text": "Seu próximo anúncio.",
+          "start": 1.4,
+          "end": 3
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "start": 6,
+      "duration": 3,
+      "text": "Explore a biblioteca",
+      "x": 0.5,
+      "y": 0.43,
+      "w": 0.84,
+      "h": 0.12,
+      "effect": "pop"
+    },
+    {
+      "id": "progress",
+      "type": "progress",
+      "start": 0,
+      "duration": 9,
+      "x": 0.5,
+      "y": 0.61,
+      "w": 0.84,
+      "h": 0.008
+    }
+  ],
+  "audio": [
+    {
+      "sfx": "whoosh",
+      "start": 0,
+      "gain": 0.65
+    },
+    {
+      "sfx": "pop",
+      "start": 3,
+      "gain": 0.65
+    },
+    {
+      "sfx": "chime",
+      "start": 6,
+      "gain": 0.65
+    }
+  ]
+}

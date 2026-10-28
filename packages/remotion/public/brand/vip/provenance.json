@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-10-19T02:06:58.147373+00:00",
+  "assets": [
+    {
+      "filename": "hero-kit-black.webp",
+      "sourceUrl": "https://nuture.com.br/cdn/shop/files/hero-kit-black.webp?v=1791477366&width=1600",
+      "sourcePage": "https://nuture.com.br/pages/captacao-black-friday-2026",
+      "sha256": "5cfd4bd93a59a001dc3fececf423525cbedf113289e4e794c888fbc32d350e3c",
+      "bytes": 179240,
+      "contentType": "image/jpeg",
+      "provenance": "Official Nuture public storefront asset; download explicitly requested by user via parent agent",
+      "scope": "Brand/product only; no testimonials",
+      "use": "Nuture ad draft; final review remains separate"
+    },
+    {
+      "filename": "d3k2.webp",
+      "sourceUrl": "https://nuture.com.br/cdn/shop/files/d3k2.webp?v=1791477505&width=800",
+      "sourcePage": "https://nuture.com.br/pages/captacao-black-friday-2026",
+      "sha256": "b8aeec073057fbd3384b883d4fd13872057c3f63374041539cfa4c0a2315d1a1",
+      "bytes": 99114,
+      "contentType": "image/jpeg",
+      "provenance": "Official Nuture public storefront asset; download explicitly requested by user via parent agent",
+      "scope": "Brand/product only; no testimonials",
+      "use": "Nuture ad draft; final review remains separate"
+    },
+    {
+      "filename": "mixer.webp",
+      "sourceUrl": "https://nuture.com.br/cdn/shop/files/mixer.webp?v=1791477514&width=800",
+      "sourcePage": "https://nuture.com.br/pages/captacao-black-friday-2026",
+      "sha256": "fc92e92cab1d4adf6c4bf89a65d7baa9b0b7bd833e84ccddde38220ba63192ee",
+      "bytes": 83946,
+      "contentType": "image/jpeg",
+      "provenance": "Official Nuture public storefront asset; download explicitly requested by user via parent agent",
+      "scope": "Brand/product only; no testimonials",
+      "use": "Nuture ad draft; final review remains separate"
+    },
+    {
+      "filename": "garrafa.webp",
+      "sourceUrl": "https://nuture.com.br/cdn/shop/files/garrafa.webp?v=1791477514&width=800",
+      "sourcePage": "https://nuture.com.br/pages/captacao-black-friday-2026",
+      "sha256": "060bca2db006dde2df9206a112d38ffaf1a2e22ef01a6352dbb02f6a3492846c",
+      "bytes": 49774,
+      "contentType": "image/jpeg",
+      "provenance": "Official Nuture public storefront asset; download explicitly requested by user via parent agent",
+      "scope": "Brand/product only; no testimonials",
+      "use": "Nuture ad draft; final review remains separate"
+    },
+    {
+      "filename": "bone.webp",
+      "sourceUrl": "https://nuture.com.br/cdn/shop/files/bone.webp?v=1791477514&width=800",
+      "sourcePage": "https://nuture.com.br/pages/captacao-black-friday-2026",
+      "sha256": "b57be10e680119bff03d0d5e86d54f2f087a5a79a180cd8184e57acf5f2d561b",
+      "bytes": 76776,
+      "contentType": "image/jpeg",
+      "provenance": "Official Nuture public storefront asset; download explicitly requested by user via parent agent",
+      "scope": "Brand/product only; no testimonials",
+      "use": "Nuture ad draft; final review remains separate"
+    },
+    {
+      "filename": "logo-branco.svg",
+      "sourceUrl": "https://nuture.com.br/cdn/shop/files/logo-branco.svg?v=1791478294&width=212",
+      "sourcePage": "https://nuture.com.br/pages/captacao-black-friday-2026",
+      "sha256": "57b8bf80e65490a661d5292036841c1cfff6e92b8e947f7c28606fa7265cce8a",
+      "bytes": 4198,
+      "contentType": "image/svg+xml",
+      "provenance": "Official Nuture public storefront asset; download explicitly requested by user via parent agent",
+      "scope": "Brand/product only; no testimonials",
+      "use": "Nuture ad draft; final review remains separate"
+    }
+  ]
+}

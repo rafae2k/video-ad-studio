@@ -1,0 +1,23 @@
+{
+  "name": "video-editor-remotion",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio index.ts",
+    "render": "node render-v2.mjs",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.536",
+    "@remotion/cli": "4.0.536",
+    "@remotion/renderer": "4.0.536",
+    "remotion": "4.0.536",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.0"
+  }
+}

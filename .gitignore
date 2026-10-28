@@ -1,0 +1,41 @@
+# Local credentials and generated job state
+.env
+*.assemblyai-job.json
+__pycache__/
+
+# Raw video and audio never enter the repository
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.wav
+*.mp3
+*.m4a
+*.flac
+
+# Local app output and dependencies
+node_modules/
+dist/
+.DS_Store
+storage/
+
+# Small original procedural SFX shipped with the reusable library
+!assets/sfx/*.wav
+
+# Local research material and real-client projects — not for publication
+research/
+projects/*
+!projects/demo
+web/references.json
+
+# Brand assets and real-person footage without redistribution rights
+packages/remotion/public/fonts/*.woff2
+packages/remotion/public/brand/vip/*
+!packages/remotion/public/brand/vip/provenance.json
+!packages/remotion/public/brand/vip/extraction.md
+packages/remotion/public/mattes/
+packages/remotion/public/generated/
+packages/remotion/public/edit.json
+packages/remotion/public/mastercopy-v3-map.json
+packages/remotion/public/mastercopy-v3-captions.json
+packages/remotion/public/hook-pace.json

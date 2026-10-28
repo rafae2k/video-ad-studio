@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "components": [
+    {
+      "id": "title",
+      "title": "Título cinético",
+      "name": "Título cinético",
+      "version": "0.1.0",
+      "category": "motion",
+      "description": "Hook e mensagem principal",
+      "tags": [
+        "motion",
+        "original",
+        "parametrizado"
+      ],
+      "defaultProps": {
+        "type": "title",
+        "start": 0,
+        "duration": 3,
+        "x": 0.5,
+        "y": 0.42,
+        "w": 0.84,
+        "h": 0.2,
+        "text": "Uma ideia.\nMuitas versões.",
+        "effect": "slide_up"
+      },
+      "supportedAspects": [
+        "9:16",
+        "4:5",
+        "1:1",
+        "16:9"
+      ],
+      "status": "draft",
+      "license": "original-project-code"
+    },
+    {
+      "id": "caption",
+      "title": "Legenda por palavra",
+      "name": "Legenda por palavra",
+      "version": "0.1.0",
+      "category": "captions",
+      "description": "Palavras sincronizadas à fala revisada",
+      "tags": [
+        "captions",
+        "original",
+        "parametrizado"
+      ],
+      "defaultProps": {
+        "type": "caption",
+        "start": 0,
+        "duration": 3,
+        "x": 0.5,
+        "y": 0.42,
+        "w": 0.84,
+        "h": 0.2,
+        "text": "Feito para chamar atenção",
+        "effect": "pop"
+      },
+      "supportedAspects": [
+        "9:16",
+        "4:5",
+        "1:1",
+        "16:9"
+      ],
+      "status": "draft",
+      "license": "original-project-code"
+    },
+    {
+      "id": "cta",
+      "title": "Cartão de CTA",
+      "name": "Cartão de CTA",
+      "version": "0.1.0",
+      "category": "ads",
+      "description": "Encerramento com ação clara",
+      "tags": [
+        "ads",
+        "original",
+        "parametrizado"
+      ],
+      "defaultProps": {
+        "type": "cta",
+        "start": 0,
+        "duration": 3,
+        "x": 0.5,
+        "y": 0.42,
+        "w": 0.84,
+        "h": 0.2,
+        "text": "Conheça a coleção",
+        "effect": "pop"
+      },
+      "supportedAspects": [
+        "9:16",
+        "4:5",
+        "1:1",
+        "16:9"
+      ],
+      "status": "draft",
+      "license": "original-project-code"
+    },
+    {
+      "id": "stat",
+      "title": "Contador",
+      "name": "Contador",
+      "version": "0.1.0",
+      "category": "ads",
+      "description": "Dado fornecido e verificado",
+      "tags": [
+        "ads",
+        "original",
+        "parametrizado"
+      ],
+      "defaultProps": {
+        "type": "stat",
+        "start": 0,
+        "duration": 3,
+        "x": 0.5,
+        "y": 0.42,
+        "w": 0.84,
+        "h": 0.2,
+        "text": "3 formatos",
+        "effect": "fade"
+      },
+      "supportedAspects": [
+        "9:16",
+        "4:5",
+        "1:1",
+        "16:9"
+      ],
+      "status": "draft",
+      "license": "original-project-code"
+    },
+    {
+      "id": "annotation_circle",
+      "title": "Círculo desenhado",
+      "name": "Círculo desenhado",
+      "version": "0.1.0",
+      "category": "vfx",
+      "description": "Destaque orgânico com traço animado",
+      "tags": [
+        "vfx",
+        "original",
+        "parametrizado"
+      ],
+      "defaultProps": {
+        "type": "annotation_circle",
+        "start": 0,
+        "duration": 3,
+        "x": 0.5,
+        "y": 0.42,
+        "w": 0.65,
+        "h": 0.17,
+        "text": ""
+      },
+      "supportedAspects": [
+        "9:16",
+        "4:5",
+        "1:1",
+        "16:9"
+      ],
+      "status": "draft",
+      "license": "original-project-code"
+    },
+    {
+      "id": "progress",
+      "title": "Barra de progresso",
+      "name": "Barra de progresso",
+      "version": "0.1.0",
+      "category": "motion",
+      "description": "Indicador de duração do beat",
+      "tags": [
+        "motion",
+        "original",
+        "parametrizado"
+      ],
+      "defaultProps": {
+        "type": "progress",
+        "start": 0,
+        "duration": 3,
+        "x": 0.5,
+        "y": 0.63,
+        "w": 0.84,
+        "h": 0.012,
+        "text": ""
+      },
+      "supportedAspects": [
+        "9:16",
+        "4:5",
+        "1:1",
+        "16:9"
+      ],
+      "status": "draft",
+      "license": "original-project-code"
+    },
+    {
+      "id": "photo_depth",
+      "title": "Movimento de foto",
+      "name": "Movimento de foto",
+      "version": "0.1.0",
+      "category": "vfx",
+      "description": "Zoom e deslocamento suave em foto; sem profundidade 3D",
+      "tags": [
+        "vfx",
+        "original",
+        "parametrizado"
+      ],
+      "defaultProps": {
+        "type": "photo_depth",
+        "start": 0,
+        "duration": 3,
+        "x": 0.5,
+        "y": 0.42,
+        "w": 0.84,
+        "h": 0.42,
+        "text": "Sua imagem aqui",
+        "effect": "fade"
+      },
+      "supportedAspects": [
+        "9:16",
+        "4:5",
+        "1:1",
+        "16:9"
+      ],
+      "status": "draft",
+      "license": "original-project-code"
+    },
+    {
+      "id": "collage_kit",
+      "title": "Recorte em movimento",
+      "name": "Recorte em movimento",
+      "version": "0.1.0",
+      "category": "vfx",
+      "description": "Movimento leve em imagem recortada; use PNG transparente",
+      "tags": [
+        "vfx",
+        "original",
+        "parametrizado"
+      ],
+      "defaultProps": {
+        "type": "collage_kit",
+        "start": 0,
+        "duration": 3,
+        "x": 0.5,
+        "y": 0.42,
+        "w": 0.84,
+        "h": 0.42,
+        "text": "Seu recorte aqui",
+        "effect": "pop"
+      },
+      "supportedAspects": [
+        "9:16",
+        "4:5",
+        "1:1",
+        "16:9"
+      ],
+      "status": "draft",
+      "license": "original-project-code"
+    }
+  ],
+  "effects": [
+    {
+      "id": "fade",
+      "title": "Fade"
+    },
+    {
+      "id": "slide_up",
+      "title": "Entrada vertical"
+    },
+    {
+      "id": "pop",
+      "title": "Pop"
+    },
+    {
+      "id": "typewriter",
+      "title": "Máquina de escrever"
+    },
+    {
+      "id": "shake",
+      "title": "Impacto"
+    },
+    {
+      "id": "glow",
+      "title": "Brilho"
+    }
+  ],
+  "sfx": [
+    {
+      "id": "whoosh",
+      "title": "Whoosh",
+      "src": "/assets/sfx/whoosh.wav",
+      "duration": 0.35,
+      "license": "original-procedural",
+      "provenance": "Gerado por packages/video/sfx.js; nenhum sample externo."
+    },
+    {
+      "id": "pop",
+      "title": "Pop",
+      "src": "/assets/sfx/pop.wav",
+      "duration": 0.35,
+      "license": "original-procedural",
+      "provenance": "Gerado por packages/video/sfx.js; nenhum sample externo."
+    },
+    {
+      "id": "click",
+      "title": "Click",
+      "src": "/assets/sfx/click.wav",
+      "duration": 0.35,
+      "license": "original-procedural",
+      "provenance": "Gerado por packages/video/sfx.js; nenhum sample externo."
+    },
+    {
+      "id": "impact",
+      "title": "Impacto",
+      "src": "/assets/sfx/impact.wav",
+      "duration": 0.35,
+      "license": "original-procedural",
+      "provenance": "Gerado por packages/video/sfx.js; nenhum sample externo."
+    },
+    {
+      "id": "riser",
+      "title": "Riser",
+      "src": "/assets/sfx/riser.wav",
+      "duration": 1.2,
+      "license": "original-procedural",
+      "provenance": "Gerado por packages/video/sfx.js; nenhum sample externo."
+    },
+    {
+      "id": "chime",
+      "title": "Chime",
+      "src": "/assets/sfx/chime.wav",
+      "duration": 0.35,
+      "license": "original-procedural",
+      "provenance": "Gerado por packages/video/sfx.js; nenhum sample externo."
+    }
+  ],
+  "rendererLibraries": [
+    {
+      "id": "remotion",
+      "catalog": "packages/remotion/catalog.json",
+      "documentation": "packages/remotion/COMPONENTS.md",
+      "compatibleWithCanvas": false
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "sourcePage": "https://nuture.com.br/",
+  "retrievedAt": "2026-10-18",
+  "assets": [
+    {
+      "file": "CremeGlaceeInkBleed-Regular.woff2",
+      "sourceUrl": "https://cdn.shopify.com/s/files/1/1012/3925/9217/files/CremeGlaceeInkBleed-Regular.woff2?v=1780369488",
+      "sha256": "f56e13a5acf9e0ab7c761c1498ebeaa472f1f3565faab86a0939c9e6239371a3",
+      "bytes": 49816,
+      "verifiedContainer": "WOFF2 TrueType",
+      "cssFontFamily": "Creme Glacee",
+      "cssFontWeight": 400,
+      "cssFontStyle": "normal",
+      "evidence": "Public homepage inline @font-face and preload both identify this exact file. Heading and accent variables use this face; inline CSS disables synthetic bold.",
+      "usageAuthorization": "User explicitly requested the official font from the brand website for this Nuture video.",
+      "license": "No separate font license text was exposed alongside the public CSS asset. Do not infer an open redistribution license."
+    },
+    {
+      "file": "Inter-400.woff2",
+      "sourceUrl": "https://nuture.com.br/cdn/fonts/inter/inter_n4.b2a3f24c19b4de56e8871f609e73ca7f6d2e2bb9.woff2",
+      "sha256": "e55f54d07fca6890a7f7c367856eff8712f07001d11df0ecd76904dc65b7963f",
+      "bytes": 38848,
+      "verifiedContainer": "WOFF2",
+      "cssFontFamily": "Inter",
+      "cssFontWeight": 400,
+      "cssFontStyle": "normal",
+      "evidence": "Public nuture.com.br homepage inline Shopify @font-face rule identifies this exact file and weight.",
+      "usageAuthorization": "User requested official Nuture body font for brand parity.",
+      "license": "Inter is distributed under SIL Open Font License; retain original notices before redistribution. Download is the brand site asset."
+    },
+    {
+      "file": "Inter-500.woff2",
+      "sourceUrl": "https://nuture.com.br/cdn/fonts/inter/inter_n5.d7101d5e168594dd06f56f290dd759fba5431d97.woff2",
+      "sha256": "6c8f5f1ae4dd0aafa809671f816ed8ba3d268b76fe9cbbe2895aaddc33a02823",
+      "bytes": 39512,
+      "verifiedContainer": "WOFF2",
+      "cssFontFamily": "Inter",
+      "cssFontWeight": 500,
+      "cssFontStyle": "normal",
+      "evidence": "Public nuture.com.br homepage inline Shopify @font-face rule identifies this exact file and weight.",
+      "usageAuthorization": "User requested official Nuture body font for brand parity.",
+      "license": "Inter is distributed under SIL Open Font License; retain original notices before redistribution. Download is the brand site asset."
+    },
+    {
+      "file": "Inter-700.woff2",
+      "sourceUrl": "https://nuture.com.br/cdn/fonts/inter/inter_n7.02711e6b374660cfc7915d1afc1c204e633421e4.woff2",
+      "sha256": "c23e740fefb08712b3f6d1d9308a54fa8be7543a035fd5fbf23c03a826f66f85",
+      "bytes": 39372,
+      "verifiedContainer": "WOFF2",
+      "cssFontFamily": "Inter",
+      "cssFontWeight": 700,
+      "cssFontStyle": "normal",
+      "evidence": "Public nuture.com.br homepage inline Shopify @font-face rule identifies this exact file and weight.",
+      "usageAuthorization": "User requested official Nuture body font for brand parity.",
+      "license": "Inter is distributed under SIL Open Font License; retain original notices before redistribution. Download is the brand site asset."
+    }
+  ]
+}

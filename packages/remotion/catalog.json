@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "renderer": "remotion-4.0.536",
+  "source": "AdComposition.tsx",
+  "components": [
+    {
+      "id": "black-opening",
+      "version": "0.1.0",
+      "export": "BlackOpening",
+      "defaultProps": {
+        "variant": "split"
+      },
+      "variants": [
+        "type",
+        "split",
+        "benefits"
+      ],
+      "duration": 8.2333333,
+      "purpose": "Três hooks: janela que revela pessoa, tela dividida e benefícios em sequência.",
+      "source": "AdComposition.tsx",
+      "status": "historical-rejected-v2"
+    },
+    {
+      "id": "reveal-line",
+      "version": "0.1.0",
+      "export": "RevealLine",
+      "defaultProps": {
+        "children": "A melhor oferta",
+        "delay": 4,
+        "size": 156,
+        "color": "#112C23"
+      },
+      "purpose": "Revelação tipográfica por máscara e spring, com fonte Creme Glacee.",
+      "source": "AdComposition.tsx",
+      "status": "historical-rejected-v2"
+    },
+    {
+      "id": "offer-reveal",
+      "version": "0.1.0",
+      "export": "OfferReveal",
+      "defaultProps": {},
+      "duration": 3.6,
+      "purpose": "Insert de oferta com linhas escalonadas e sublinhado.",
+      "source": "AdComposition.tsx",
+      "status": "historical-rejected-v2"
+    },
+    {
+      "id": "founder-signature",
+      "version": "0.1.0",
+      "export": "FounderSignature",
+      "defaultProps": {},
+      "duration": 2.2,
+      "purpose": "Identificação do fundador com linha SVG desenhada.",
+      "source": "AdComposition.tsx",
+      "status": "historical-rejected-v2"
+    },
+    {
+      "id": "benefit-tickets",
+      "version": "0.1.0",
+      "export": "BenefitTickets",
+      "defaultProps": {
+        "compact": false
+      },
+      "duration": 5.3,
+      "beatsSeconds": [
+        0,
+        1.048,
+        2.192
+      ],
+      "purpose": "Tickets entram e reorganizam nos timestamps de desconto, brinde e bônus. Compact cabe em split-screen.",
+      "source": "AdComposition.tsx",
+      "status": "historical-rejected-v2"
+    },
+    {
+      "id": "vip-pass",
+      "version": "0.1.0",
+      "export": "VipPass",
+      "defaultProps": {
+        "endCard": false
+      },
+      "duration": 5.1,
+      "purpose": "Passe sai de envelope; endCard troca título e mensagem para CTA.",
+      "source": "AdComposition.tsx",
+      "status": "historical-rejected-v2"
+    },
+    {
+      "id": "paper-wipe",
+      "version": "0.1.0",
+      "export": "PaperWipe",
+      "source": "CopyLockedV3.tsx",
+      "defaultProps": {
+        "duration": 15
+      },
+      "purpose": "Revelação de camada por borda irregular; children obrigatório.",
+      "status": "draft-v3"
+    },
+    {
+      "id": "text-reveal",
+      "version": "0.1.0",
+      "export": "TextReveal",
+      "source": "CopyLockedV3.tsx",
+      "defaultProps": {
+        "size": 145,
+        "delay": 0,
+        "color": "#F5F2EB"
+      },
+      "purpose": "Lettering Creme Glacee revelado por máscara vertical; children obrigatório.",
+      "status": "draft-v3"
+    },
+    {
+      "id": "physical-photo",
+      "version": "0.1.0",
+      "export": "PhysicalPhoto",
+      "source": "CopyLockedV3.tsx",
+      "defaultProps": {
+        "startScale": 1,
+        "endScale": 1.06,
+        "rotation": -3
+      },
+      "purpose": "Foto em moldura física irregular com zoom e sombra; src opcional.",
+      "status": "draft-v3"
+    },
+    {
+      "id": "roto-person",
+      "version": "0.1.0",
+      "export": "RotoPerson",
+      "source": "CopyLockedV3.tsx",
+      "defaultProps": {
+        "shiftX": 0,
+        "scale": 1
+      },
+      "purpose": "Recorte por matte de luminância; específico para master David e fonte45–134.",
+      "status": "draft-v3"
+    },
+    {
+      "id": "copy-locked-opening",
+      "version": "0.1.0",
+      "export": "OpeningV3",
+      "source": "CopyLockedV3.tsx",
+      "defaultProps": {
+        "variant": "depth"
+      },
+      "purpose": "Aberturas depth/split/paper com hook do Notion.",
+      "status": "draft-v3"
+    },
+    {
+      "id": "nutrition-collage",
+      "version": "0.1.0",
+      "export": "NutritionCollage",
+      "source": "CopyLockedV3.tsx",
+      "defaultProps": {},
+      "purpose": "Potes genéricos gerados → kit real com59ingredientes; copy da campanha.",
+      "status": "draft-v3"
+    },
+    {
+      "id": "offer-collage",
+      "version": "0.1.0",
+      "export": "OfferCollage",
+      "source": "CopyLockedV3.tsx",
+      "defaultProps": {},
+      "purpose": "Oferta com foto física e lettering sincronizado.",
+      "status": "draft-v3"
+    },
+    {
+      "id": "benefits-collage",
+      "version": "0.1.0",
+      "export": "BenefitsCollage",
+      "source": "CopyLockedV3.tsx",
+      "defaultProps": {},
+      "purpose": "Descontos/brindes/bônus com foto real e sublinhado desenhado.",
+      "status": "draft-v3"
+    }
+  ],
+  "limitations": [
+    "Composição vertical 1080x1920; outros formatos exigem novo layout.",
+    "Componentes de cena ainda contêm copy e paleta desta campanha; reaproveitar estrutura e revisar conteúdo.",
+    "Não são compatíveis com o renderer Canvas. O catálogo Canvas mantém contrato próprio.",
+    "Fonte principal é local e aguarda carregamento; texto de apoio usa Inter local400/500/700, com fallback Arial.",
+    "Hooks são hipóteses de edição, sem evidência de retenção até teste real.",
+    "RotoPerson usa mattes locais específicos deste take, não um segmentador genérico; trocar fonte exige regenerar/alinharmattes. Imagens de máscara têm alpha opaco e exigem luminance."
+  ],
+  "sources": [
+    "AdComposition.tsx",
+    "CopyLockedV3.tsx"
+  ],
+  "currentComposition": "CopyLockedV3"
+}

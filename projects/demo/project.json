@@ -1,0 +1,23 @@
+{
+  "id": "demo",
+  "title": "Demo de componentes para ads",
+  "brand": "Marca fictícia",
+  "status": "demo",
+  "updatedAt": "2026-10-18",
+  "description": "Exemplo técnico para explorar componentes, efeitos e variações. Não é uma campanha aprovada.",
+  "variants": [
+    {
+      "id": "v1",
+      "name": "Hook direto",
+      "manifestPath": "/packages/video/examples/demo.json",
+      "status": "draft"
+    },
+    {
+      "id": "v2",
+      "name": "Hook alternativo",
+      "manifestPath": "/packages/video/examples/demo-variant.json",
+      "status": "draft"
+    }
+  ],
+  "finals": []
+}
