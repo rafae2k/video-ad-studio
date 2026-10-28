@@ -2,6 +2,12 @@
 
 Estúdio local para organizar **ideias → variações → versões finais** e construir uma biblioteca reutilizável de motion, VFX, legendas, CTA e SFX. O primeiro setup usa JavaScript sem dependências externas para o Studio e o preview, com três backends: preview Canvas, edição FFmpeg e composição React/Remotion.
 
+## Exemplo
+
+Corte, ritmo e legendas sobre fala gravada — à esquerda o vídeo original (raw), à direita a edição v1 com cortes guiados pela transcrição e legendas queimadas:
+
+![Original vs edição v1](assets/example/surfista-raw-vs-edit.gif)
+
 ## Iniciar
 
 Requisitos já presentes nesta máquina: Node.js e FFmpeg/FFprobe. Rode:
