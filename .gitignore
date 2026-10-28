@@ -23,9 +23,10 @@ storage/
 !assets/sfx/*.wav
 
 # Local research material and real-client projects — not for publication
-research/
+/research/
 projects/*
 !projects/demo
+!projects/README.md
 web/references.json
 
 # Brand assets and real-person footage without redistribution rights

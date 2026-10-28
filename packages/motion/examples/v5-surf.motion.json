@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "id": "v5-surf",
+  "name": "Velho surfando / ABS — v5 (lettering atrás da cabeça, RVM)",
+  "backend": "motion-matte-v1",
+  "status": "draft",
+  "source": "storage/sources/david-velho-surfando-abs/IMG_1615.mov",
+  "transcript": "projects/david-velho-surfando-abs/intake/transcripts/IMG_1615.json",
+  "work": "storage/work/david-velho-surfando-abs/v5-repro",
+  "output": "storage/exports/david-velho-surfando-abs/v5-repro.mp4",
+  "outputSmall": {"path": "storage/exports/david-velho-surfando-abs/v5-repro-10mb.mp4", "maxMB": 9.6},
+  "edl": {
+    "takes": [
+      [13.26, 18.12, false],
+      [20.16, 21.62, false],
+      [50.38, 54.15, false],
+      [61.58, 64.69, false],
+      [87.98, 90.59, false],
+      [99.5, 106.08, false],
+      [115.85, 119.44, true],
+      [128.61, 133.41, true],
+      [164.58, 169.19, false],
+      [174.58, 178.93, false],
+      [184.94, 186.51, false],
+      [207.92, 211.97, false],
+      [215.19, 219.56, false],
+      [227.73, 236.08, false]
+    ],
+    "zooms": [1.0, 1.25, 1.1, 1.4, 1.0, 1.18, 1.32],
+    "wordFixes": {"nutri": "nuture", "nuturi": "nuture", "clorela": "chlorella"},
+    "wordOverrides": [{"from": 99.48, "to": 101.0, "words": [[99.5, 100.7, "espirulina"]]}],
+    "speeds": {}
+  },
+  "layout": {"faceY": 0.36, "destY": 0.53, "defaultPlate": "orig"},
+  "brand": {
+    "accent": [213, 229, 0],
+    "cream": [245, 242, 235],
+    "ink": [22, 22, 22],
+    "fonts": {"display": "~/Library/Fonts/CremeGlaceeInkBleed-Regular.otf", "sans": "/System/Library/Fonts/SFNS.ttf"}
+  },
+  "captions": {
+    "properNouns": {
+      "nuture": "Nuture",
+      "david": "David",
+      "vip": "VIP",
+      "whatsapp": "WhatsApp",
+      "black": "Black",
+      "friday": "Friday",
+      "q10": "Q10",
+      "daily": "Daily",
+      "boost": "Boost",
+      "davi": "Davi"
+    }
+  },
+  "plates": [
+    {"t0": 13.2, "t1": 16.28, "kind": "dark"},
+    {
+      "t0": 16.3,
+      "t1": 17.75,
+      "kind": "video",
+      "file": "storage/assets/ai-generated/surfer.mp4",
+      "ss": 0.4,
+      "dim": 1.0,
+      "full": true,
+      "zoom": 0.08
+    },
+    {"t0": 20.1, "t1": 22.0, "kind": "dark"},
+    {
+      "t0": 52.1,
+      "t1": 54.15,
+      "kind": "video",
+      "file": "storage/assets/ai-generated/cells.mp4",
+      "ss": 0.4,
+      "dim": 1.0,
+      "full": true,
+      "zoom": 0.08
+    },
+    {
+      "t0": 99.5,
+      "t1": 101.2,
+      "kind": "image",
+      "file": "storage/assets/ai-generated/spirulina.png",
+      "dim": 0.95,
+      "zoom": 0.12
+    },
+    {
+      "t0": 101.22,
+      "t1": 102.5,
+      "kind": "image",
+      "file": "storage/assets/ai-generated/chlorella.png",
+      "dim": 0.95,
+      "zoom": 0.12
+    },
+    {
+      "t0": 102.55,
+      "t1": 104.0,
+      "kind": "image",
+      "file": "storage/assets/ai-generated/grapes.png",
+      "dim": 0.95,
+      "zoom": 0.12
+    },
+    {
+      "t0": 104.06,
+      "t1": 105.25,
+      "kind": "image",
+      "file": "storage/assets/ai-generated/coq10.png",
+      "dim": 0.95,
+      "zoom": 0.12
+    },
+    {
+      "t0": 105.3,
+      "t1": 106.45,
+      "kind": "image",
+      "file": "storage/assets/ai-generated/vitc.png",
+      "dim": 0.95,
+      "zoom": 0.12
+    },
+    {
+      "t0": 115.8,
+      "t1": 119.5,
+      "kind": "video",
+      "file": "storage/assets/nuture-lp/lp_video_3.mp4",
+      "ss": 0.2,
+      "dim": 0.55
+    },
+    {
+      "t0": 128.56,
+      "t1": 133.5,
+      "kind": "image",
+      "file": "storage/assets/nuture-lp/nuture_daily_boost_still_1200x1200_28db23e7-1497-4a4c-9d21-21ea80160535.webp",
+      "dim": 0.5,
+      "zoom": 0.1
+    },
+    {"t0": 164.5, "t1": 169.4, "kind": "dark"},
+    {
+      "t0": 207.85,
+      "t1": 212.3,
+      "kind": "image",
+      "file": "storage/assets/nuture-lp/hero-kit-black.webp",
+      "dim": 0.72,
+      "zoom": 0.14
+    },
+    {"t0": 217.1, "t1": 219.9, "kind": "dark"},
+    {"t0": 227.6, "t1": 236.4, "kind": "dark"}
+  ],
+  "letters": [
+    {
+      "lines": ["A CIÊNCIA", "ESTUDA", "HÁ DÉCADAS"],
+      "t0": 13.9,
+      "t1": 16.2,
+      "anim": "rise",
+      "hl": 2,
+      "color": "cream"
+    },
+    {
+      "lines": ["ATRASAR O", "ENVELHECIMENTO"],
+      "t0": 16.3,
+      "t1": 17.75,
+      "anim": "slam",
+      "hl": 1,
+      "color": "cream",
+      "y": 0.5
+    },
+    {"lines": ["ANTIOXIDANTES"], "t0": 20.16, "t1": 21.9, "anim": "slam", "hl": 0, "color": "cream"},
+    {
+      "lines": ["ESTRESSE", "OXIDATIVO"],
+      "t0": 52.15,
+      "t1": 54.15,
+      "anim": "rise",
+      "hl": 1,
+      "color": "cream",
+      "y": 0.5
+    },
+    {"lines": ["ESPIRULINA"], "t0": 99.5, "t1": 101.15, "anim": "slam", "hl": 0, "color": "cream"},
+    {"lines": ["CHLORELLA"], "t0": 101.22, "t1": 102.5, "anim": "slam", "hl": 0, "color": "cream"},
+    {"lines": ["RESVERATROL"], "t0": 102.55, "t1": 104.0, "anim": "slam", "hl": 0, "color": "cream"},
+    {"lines": ["COENZIMA", "Q10"], "t0": 104.06, "t1": 105.25, "anim": "slam", "hl": 0, "color": "cream"},
+    {"lines": ["VITAMINA C"], "t0": 105.3, "t1": 106.4, "anim": "slam", "hl": 0, "color": "cream"},
+    {
+      "lines": ["NUTURE", "DAILY", "BOOST"],
+      "t0": 116.0,
+      "t1": 119.4,
+      "anim": "rise",
+      "hl": 2,
+      "color": "cream"
+    },
+    {"lines": ["1 DOSE", "POR DIA"], "t0": 130.0, "t1": 133.4, "anim": "slam", "hl": 0, "color": "cream"},
+    {
+      "lines": ["NÃO ADIANTA", "PROCURAR", "MILAGRE"],
+      "t0": 168.0,
+      "t1": 169.4,
+      "anim": "rise",
+      "hl": 2,
+      "color": "cream"
+    },
+    {"lines": ["BONS HÁBITOS"], "t0": 176.6, "t1": 178.2, "anim": "slam", "hl": 0, "color": "cream"},
+    {"lines": ["AO LONGO", "DOS ANOS"], "t0": 178.23, "t1": 179.1, "anim": "rise", "hl": 1, "color": "cream"},
+    {
+      "lines": ["OPORTUNIDADE", "CHEGANDO"],
+      "t0": 185.3,
+      "t1": 186.8,
+      "anim": "rise",
+      "hl": 1,
+      "color": "cream"
+    },
+    {"lines": ["BLACK", "FRIDAY"], "t0": 208.0, "t1": 209.7, "anim": "slam", "hl": 0, "color": "cream"},
+    {
+      "lines": ["A MELHOR", "OFERTA DA", "HISTÓRIA"],
+      "t0": 209.75,
+      "t1": 212.2,
+      "anim": "rise",
+      "hl": 2,
+      "color": "cream"
+    },
+    {"lines": ["GRUPO VIP"], "t0": 217.2, "t1": 218.8, "anim": "slam", "hl": 0, "color": "cream"},
+    {
+      "lines": ["ANTES DE", "TODO MUNDO"],
+      "t0": 218.86,
+      "t1": 219.8,
+      "anim": "rise",
+      "hl": 1,
+      "color": "cream"
+    },
+    {"lines": ["SAÚDE EM", "DÉCADAS"], "t0": 229.0, "t1": 230.8, "anim": "rise", "hl": 1, "color": "cream"},
+    {
+      "lines": ["BOA", "OPORTUNIDADE"],
+      "t0": 231.3,
+      "t1": 232.6,
+      "anim": "rise",
+      "hl": 1,
+      "color": "cream",
+      "cap": 200
+    },
+    {"lines": ["GRUPO VIP"], "t0": 234.7, "t1": 236.4, "anim": "slam", "hl": 0, "color": "cream"}
+  ],
+  "props": [],
+  "cta": {"text": "Entrar no Grupo VIP", "t": 232.9},
+  "sfxExtra": [{"name": "impact", "t": 208.0, "vol": 0.7}, {"name": "chime", "t": 217.38, "vol": 0.4}]
+}

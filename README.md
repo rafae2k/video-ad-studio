@@ -1,10 +1,10 @@
 # Video Ad Studio
 
-Estúdio local para organizar **ideias → variações → versões finais** e construir uma biblioteca reutilizável de motion, VFX, legendas, CTA e SFX. O primeiro setup usa JavaScript sem dependências externas para o Studio e o preview, com três backends: preview Canvas, edição FFmpeg e composição React/Remotion.
+Estúdio local para organizar **ideias → variações → versões finais** e construir uma biblioteca reutilizável de motion, VFX, legendas, CTA e SFX. O Studio e o preview são JavaScript sem dependências externas. A edição tem quatro backends: **motion sobre vídeo de fala** (Python + RVM, o do exemplo abaixo), preview Canvas, cortes FFmpeg e composição React/Remotion.
 
 ## Exemplo
 
-Fala gravada transformada em anúncio — à esquerda o vídeo original (raw, 4min14), à direita a edição v5 (57 s): cortes guiados pela transcrição, recorte da pessoa (máscaras RVM) com fundo trocado e letreiros atrás dela, clipes gerados por IA, packshot e CTA. Feita com um compositor Python próprio (Pillow/OpenCV/NumPy + FFmpeg), não com Remotion; é um draft, não uma peça final aprovada.
+Fala gravada transformada em anúncio — à esquerda o vídeo original (raw, 4min14), à direita a edição v5 (57 s): cortes guiados pela transcrição, recorte da pessoa (máscaras RVM) com fundo trocado e letreiros atrás dela, clipes gerados por IA, packshot e CTA. Feita com o backend [`packages/motion`](packages/motion/README.md) (Pillow/OpenCV/NumPy + FFmpeg), não com Remotion; é um draft, não uma peça final aprovada.
 
 <table>
   <tr>
@@ -16,6 +16,18 @@ Fala gravada transformada em anúncio — à esquerda o vídeo original (raw, 4m
     <td><video src="https://github.com/user-attachments/assets/f5cd2ba1-9474-4a02-8df2-fd8719f955c8" controls width="300"></video></td>
   </tr>
 </table>
+
+### Reproduzir com o seu vídeo
+
+O repo refaz essa edição a partir do bruto: o render do [manifest da v5](packages/motion/examples/v5-surf.motion.json) sai **byte a byte igual** ao vídeo acima. O bruto, a transcrição e os assets da marca não são publicados, então com o seu material o caminho é:
+
+```sh
+npm run transcribe -- --submit --input storage/sources/<id>/take.mov --output-dir projects/<id>/intake/transcripts
+cp packages/motion/examples/v5-surf.motion.json projects/<id>/edits/v1.motion.json   # takes, lettering, fundos
+npm run motion -- projects/<id>/edits/v1.motion.json all
+```
+
+Requisitos: Node.js, FFmpeg/FFprobe, [`uv`](https://docs.astral.sh/uv/), uma chave AssemblyAI em `.env` (só para transcrever) e uma fonte display licenciada. A receita completa, com regras de lettering, fundos e pace, prompts de IA (Magnific) e checklist de QA, está na skill [video-ad-motion](skills/video-ad-motion/SKILL.md). Um agente com este repo pode segui-la: peça "edita esse vídeo como o exemplo do README".
 
 ## Iniciar
 
@@ -38,15 +50,17 @@ npm run check
 | Caminho                  | Função                                                                            |
 | ------------------------ | --------------------------------------------------------------------------------- |
 | `web/`                   | Interface local para ideação, variações, finais e referências.                    |
+| `packages/motion/`       | Backend motion-matte: talking head → anúncio com lettering atrás da pessoa.     |
 | `packages/video/`        | Catálogo e renderer de preview por frame; exemplos de manifest e SFX procedurais. |
 | `assets/sfx/`            | Sons originais versionados, com proveniência no catálogo.                         |
 | `projects/`              | Índice de projetos que outros agentes podem atualizar e o Studio pode ler.        |
-| `skills/`                | Skills de handoff por etapa (intake, ideação, geração, composição, QA) e práticas Remotion. |
-| `scripts/dev-server.mjs` | Servidor local com allowlist de arquivos e endpoint de leitura de projetos.       |
+| `skills/`                | Skills por etapa (intake, ideação, geração, composição, QA), a receita motion e práticas Remotion. |
+| `docs/`                  | Ferramentas, aprendizados e o [resumo da pesquisa](docs/research/README.md).      |
+| `scripts/`               | Servidor local, transcrição AssemblyAI, renderer FFmpeg V1 e utilitários.         |
 
 ## Estado atual
 
-O Studio tem um projeto de demonstração e amostras de componentes; nenhuma campanha real ou versão final foi aprovada. O preview usa Canvas e os manifests são JSON exportáveis. Ainda faltam persistência editável compartilhada entre agentes, render final comprovadamente equivalente ao preview, fila de jobs, integração com geradores de vídeo e revisão de licenças/claims de cada campanha. A base foi organizada para acrescentar um renderer de produção sem tratar um mock de interface como anúncio pronto.
+O backend motion edita vídeo de fala de ponta a ponta e reproduz o exemplo acima. Ele ainda não tem ajuste de máscara à mão, e a revisão da v5 registrou defeitos conhecidos, listados no [README do pacote](packages/motion/README.md#limites-conhecidos-medidos-na-v5). O Studio tem um projeto de demonstração e amostras de componentes Canvas. Nenhuma campanha real ou versão final foi aprovada. Ainda faltam persistência editável compartilhada entre agentes, adaptador de geração de vídeo no repo (hoje via MCP), fila de jobs e revisão de licenças/claims de cada campanha.
 
 Para acrescentar componentes e projetos, siga [AGENTS.md](AGENTS.md) e [a documentação da biblioteca](packages/video/README.md). O inventário de [skills, ferramentas e lacunas](docs/tooling.md) indica o que já pode ser usado e o que falta para produção.
 

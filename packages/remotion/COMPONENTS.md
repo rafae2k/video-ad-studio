@@ -13,7 +13,7 @@
 
 `PaperWipe` e `TextReveal` aceitam children; a posição/layout fica no pai. `PhysicalPhoto` aceita src, startScale, endScale, rotation. Esses três padrões podem ser reaproveitados. `RotoPerson` ainda está acoplado ao David: máscara de luminância frame45+frameLocal, mesmo crop e mesmo tempo do vídeo. No take atual, restringir aos primeiros90frames de saída; depois há spill ligado à mão/cabeça. Não esticar uma máscara estática ou usar alpha opaco como transparência.
 
-As cenas `NutritionCollage`, `OfferCollage` e `BenefitsCollage` contêm a mensagem da campanha. Reutilize a estrutura e substitua dados/assets; não trate como templates genéricos já aprovados. O copy é preservado no master e as variantes só alteram a apresentação da abertura. As fontes de referência e o que foi observado estão em [v3-ref-frame-analysis](../../projects/david-pronunciamento-black/reviews/v3-ref-frame-analysis.md).
+As cenas `NutritionCollage`, `OfferCollage` e `BenefitsCollage` contêm a mensagem da campanha. Reutilize a estrutura e substitua dados/assets; não trate como templates genéricos já aprovados. O copy é preservado no master e as variantes só alteram a apresentação da abertura. As fontes de referência e o que foi observado estão em v3-ref-frame-analysis (`projects/david-pronunciamento-black/reviews/v3-ref-frame-analysis.md`, local).
 
 ## Histórico V2
 
@@ -40,7 +40,7 @@ A Creme Glacee Ink Bleed Regular é o arquivo usado no site oficial Nuture, docu
 
 ## Referências aplicadas
 
-[Zee](../../research/ai-video-editing/video-review/videos/zeeuiux_1792132224_4009017648649136432_46983307566.md): objetos e estados acompanham palavras. [Edmund](../../research/ai-video-editing/video-review/videos/edmund.tian_1791658525_4004393620950312149_2521262351.md): alternância intencional entre speaker e inserts conceituais, mantendo voz contínua. O desenho é próprio; não incorporamos frames dessas referências no anúncio. A [direção do projeto](../../projects/david-pronunciamento-black/reviews/v2-art-direction.md) detalha a análise e hipóteses; a entrega pode selecionar e adaptar essas propostas.
+Zee (`research/ai-video-editing/video-review/videos/zeeuiux_1792132224_4009017648649136432_46983307566.md`, local): objetos e estados acompanham palavras. Edmund (`research/ai-video-editing/video-review/videos/edmund.tian_1791658525_4004393620950312149_2521262351.md`, local): alternância intencional entre speaker e inserts conceituais, mantendo voz contínua. O desenho é próprio; não incorporamos frames dessas referências no anúncio. A direção do projeto (`projects/david-pronunciamento-black/reviews/v2-art-direction.md`, local) detalha a análise e hipóteses; a entrega pode selecionar e adaptar essas propostas.
 
 ## Gate dos três segundos
 

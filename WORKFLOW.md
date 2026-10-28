@@ -1,6 +1,8 @@
 # Workflow do agente para anúncios em vídeo
 
-Este é o caminho operacional do repositório, baseado nas [pesquisas de criação](research/ai-video-ads/README.md), [edição](research/ai-video-editing/README.md) e na [análise dos 16 vídeos](research/ai-video-editing/video-review/README.md). Ele descreve saídas verificáveis. Uma referência de creator inspira técnica; não vira asset comercial ou claim aprovado automaticamente.
+Este é o caminho operacional do repositório, baseado na [pesquisa resumida em docs/research](docs/research/README.md) (a versão completa fica em `research/`, local e fora do Git). Ele descreve saídas verificáveis.
+
+**Atalho para vídeo de fala:** intake (passo 1) → receita [video-ad-motion](skills/video-ad-motion/SKILL.md) (passos 2–4 com o backend `motion-matte-v1`) → QA (passo 5). É o caminho que produziu o [exemplo do README](README.md#exemplo) e o único que o repositório reproduz byte a byte a partir do bruto. Uma referência de creator inspira técnica; não vira asset comercial ou claim aprovado automaticamente.
 
 ## 0. Abrir um projeto e fixar o brief
 
@@ -10,7 +12,7 @@ Use `npm run project:new -- <id> "Título" "Marca"` para criar `projects/<id>/`.
 
 ## 1. Ingerir fontes e registrar evidência
 
-Use [video-ad-intake](skills/video-ad-intake/SKILL.md) quando receber vídeos, imagens, áudio ou referências. Gere ID/hash, metadados FFprobe, transcrição de fala com timestamps quando couber, segmentos e frames representativos. Relacione cada observação ao trecho/arquivo. Diferencie o que aparece no material, o que o creator alega e o que inferimos. Registre direitos e proveniência em `assets.json`; mantenha originais fora do Git quando forem pesados ou de terceiros.
+Use [video-ad-intake](skills/video-ad-intake/SKILL.md) quando receber vídeos, imagens, áudio ou referências. Gere ID/hash, metadados FFprobe, transcrição de fala com timestamps quando couber (`npm run transcribe -- --input <bruto> --output-dir projects/<id>/intake/transcripts`, dry run por padrão), segmentos e frames representativos. Relacione cada observação ao trecho/arquivo. Diferencie o que aparece no material, o que o creator alega e o que inferimos. Registre direitos e proveniência em `assets.json`; mantenha originais fora do Git quando forem pesados ou de terceiros.
 
 Quando o usuário pedir material **nunca editado**, audite o card, suas discussões, a identidade do bruto (file ID/hash), duplicatas e entregas no Frame.io antes de selecioná-lo como tal. `Edição v1` ou campo v1 vazio não comprovam ineditismo. Registre `no_delivery_found`, `confirmed_unedited` ou `excluded_existing_edit`, com evidências e situação do trabalho em andamento (inclusive `unknown`), conforme a skill de intake. Aplique essa seleção somente quando ela fizer parte da restrição do pedido.
 
@@ -26,7 +28,7 @@ Use [video-ad-ideate](skills/video-ad-ideate/SKILL.md). Leia o brief, os trechos
 
 **Copy antes do ritmo:** quando o pedido é ajustar pace, marque o texto aprovado como bloqueado e compare cada frase com a transcrição. Reduza pausas e falsas partidas sem suprimir argumentos, reorderar o corpo ou abreviar o CTA. Registre fonte→saída por frame. Se uma fala do roteiro não existe no bruto, registre a lacuna e apresente a solução visual explicitamente; não fabrique voz nem descreva lettering como fala gravada. Compare as variantes com o mesmo master de áudio, salvo pedido de mudar o texto.
 
-Use [video-ad-compose](skills/video-ad-compose/SKILL.md). Crie `projects/<id>/variants/<variant-id>.json` com backend explícito. Para Canvas, siga o contrato de `packages/video/README.md`: dimensões, FPS, duração, layers, textos, timing, component IDs e cues SFX. FFmpeg V1 usa cortes/captions/overlays de `scripts/render-footage.md`. Remotion V2 usa composição React em `packages/remotion/`, com dados editáveis passados como `{edit}` e mídia local autorizada em `public/`; leia a skill oficial local `skills/remotion-best-practices/SKILL.md`. A variação deve dizer o que mudou em relação à anterior (hook, CTA, formato, ritmo, legenda, idioma ou visual), mantendo o corpo comum quando aprovado. Insira o `manifestPath` em `project.json` para aparecer em **Variações**.
+Use [video-ad-compose](skills/video-ad-compose/SKILL.md). Crie `projects/<id>/variants/<variant-id>.json` com backend explícito. Para vídeo de fala, o padrão é `motion-matte-v1`: manifest `projects/<id>/edits/<variante>.motion.json` com takes, lettering e plates em segundos do bruto, conforme [packages/motion](packages/motion/README.md) e a receita [video-ad-motion](skills/video-ad-motion/SKILL.md). Para Canvas, siga o contrato de `packages/video/README.md`: dimensões, FPS, duração, layers, textos, timing, component IDs e cues SFX. FFmpeg V1 usa cortes/captions/overlays de `scripts/render-footage.md`. Remotion V2 usa composição React em `packages/remotion/`, com dados editáveis passados como `{edit}` e mídia local autorizada em `public/`; leia a skill oficial local `skills/remotion-best-practices/SKILL.md`. A variação deve dizer o que mudou em relação à anterior (hook, CTA, formato, ritmo, legenda, idioma ou visual), mantendo o corpo comum quando aprovado. Insira o `manifestPath` em `project.json` para aparecer em **Variações**.
 
 Valide JSON, timeline e assets referenciados. Use `validateProject()` apenas para manifests Canvas. Para FFmpeg use `--validate-only` e reveja o export; para Remotion valide TypeScript, abra a composição no Remotion Studio e compare frames/export da mesma composição. Assista em tamanho de celular, incluindo zonas de interface. As legendas partem de transcrição revisada; mantenha texto e timing como dados, não como texto gerado dentro do vídeo de IA.
 
@@ -34,17 +36,18 @@ Valide JSON, timeline e assets referenciados. Use `validateProject()` apenas par
 
 ## 4. Produzir mídia e renderizar
 
-**Footage real:** o [renderer FFmpeg/Pillow](scripts/render-footage.md) monta cortes, mantém a voz original e aplica legendas/headline/CTA de um manifest em `projects/<id>/edits/`. O MP4 aparece em Variações por `videoPath`, como draft com player e áudio. É um backend independente do Canvas; não prometa equivalência entre os dois contratos. A primeira aplicação está em `projects/david-pronunciamento-black/`.
+**Footage real:** o [renderer FFmpeg/Pillow](scripts/render-footage.md) monta cortes, mantém a voz original e aplica legendas/headline/CTA de um manifest em `projects/<id>/edits/`. O MP4 aparece em Variações por `videoPath`, como draft com player e áudio. É um backend independente do Canvas; não prometa equivalência entre os dois contratos. Para motion sobre a fala (pessoa recortada, lettering atrás, fundos trocados), use o backend `motion-matte-v1`, abaixo.
 
-Use [video-ad-generate](skills/video-ad-generate/SKILL.md) quando a ideia exigir imagem, footage, voz ou avatar novos. Primeiro fixe prompt, referências, autorização de rosto/voz, provedor e custo esperado. O repositório **não tem adaptador de geração de vídeo**; registre um job externo e importe o arquivo com hash/proveniência, sem fingir que foi gerado pelo Studio. Gere SFX originais com `node packages/video/generate-sfx.js` se necessário.
+Use [video-ad-generate](skills/video-ad-generate/SKILL.md) quando a ideia exigir imagem, footage, voz ou avatar novos. Primeiro fixe prompt, referências, autorização de rosto/voz, provedor e custo esperado. O repositório **não tem adaptador de geração de vídeo**; registre um job externo (no exemplo do README, Magnific via MCP: Seedance Fast 2.0 para cutaways e stills 9:16 por ingrediente) e importe o arquivo com hash/proveniência, sem fingir que foi gerado pelo Studio. Gere SFX originais com `node packages/video/generate-sfx.js` se necessário.
 
 O manifest da etapa 3 pode começar como animatic com placeholders. Depois da seleção dos arquivos gerados, volte ao manifest para trocar os placeholders pelos assets reais e revisar a peça em movimento.
 
-Há três caminhos de export, com contratos distintos:
+Há quatro caminhos de export, com contratos distintos:
 
 1. **Canvas:** `node packages/video/encode-frames.js <manifest> <frames-dir> <output.mp4>` codifica PNGs capturados com `renderFrame` e verifica H.264/AAC. Sem essa sequência não há MP4; este caminho não mistura narração externa.
 2. **FFmpeg V1:** `scripts/render-footage.py` concatena cortes de fonte real, preserva voz, normaliza áudio e queima texto Pillow. É um backend de edição independente, com texto estático; não demonstra motion graphics React ou paridade Canvas.
-3. **Remotion V2:** `node packages/remotion/render-v2.mjs <output.mp4>` renderiza a composição React registrada, usando o mesmo componente do preview Remotion Studio. `--frame N --still <frame.png>` permite inspecionar frames pelo mesmo motor. Dependências oficiais estão instaladas em `packages/remotion`; o README documenta mídia local, props e limites. Use source original, sem legendas queimadas de versões anteriores.
+3. **Motion matte (`motion-matte-v1`):** `npm run motion -- <manifest.motion.json> all` faz EDL pela transcrição, aperto de respiro, máscaras RVM, plano e render quadro a quadro com voz original limpa, SFX e loudnorm. `render --preview A-B` gera um trecho em `storage/work/`. Recusa sobrescrever `output`. Reproduz a v5 do exemplo byte a byte; isso não prova paridade com Canvas ou Remotion.
+4. **Remotion V2:** `node packages/remotion/render-v2.mjs <output.mp4>` renderiza a composição React registrada, usando o mesmo componente do preview Remotion Studio. `--frame N --still <frame.png>` permite inspecionar frames pelo mesmo motor. Dependências oficiais estão instaladas em `packages/remotion`; o README documenta mídia local, props e limites. Use source original, sem legendas queimadas de versões anteriores.
 
 Registre backend, manifest, componentes/código de origem, mídia utilizada e resultado efetivamente observado. MP4 exportado não é automaticamente uma versão final. Nenhum caminho autoriza afirmar paridade com os demais ou produção em volume validada.
 

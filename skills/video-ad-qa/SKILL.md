@@ -12,8 +12,9 @@ Produza uma decisão rastreável sobre uma versão específica: correções nece
 Resolva os caminhos abaixo a partir da raiz do checkout, nunca do diretório pessoal do agente. Leia `AGENTS.md`, `WORKFLOW.md` quando presente, o `projects/<id>/project.json` e o manifest da variante. Use `brief.json`, `ideas.json`, `approvals.json` e `assets.json` do projeto quando existentes para recuperar claims permitidos, intenção, aprovações e proveniência; respeite o schema existente. Não leia `.env`.
 
 - `packages/video/README.md`: contrato atual de tempo, safe area, assets, preview e encoder. A biblioteca Canvas não reproduz áudio; o encoder atual aceita SFX do catálogo e não monta voz/música externas. Não inferir recursos de uma pesquisa ou interface.
-- `research/ai-video-editing/video-review/README.md`: evidência dos 16 clipes e suas limitações. Consulte a análise do clipe pertinente quando a revisão depender de uma técnica específica. Os cartões de marketing não comprovam implementação, áudio ou produtividade.
-- `research/ai-video-ads/README.md`: gates de conceito, keyframe, animatic e render; produto/embalagem frequentemente exigem correção humana.
+- [Resumo da pesquisa](../../docs/research/README.md): o que veio das referências, as ferramentas testadas e o histórico v1–v7 do exemplo do README. Com o checkout original, `research/ai-video-editing/video-review/` (local, fora do Git) tem as análises por clipe. Os cartões de marketing não comprovam implementação, áudio ou produtividade.
+- `research/ai-video-ads/README.md` (local): gates de conceito, keyframe, animatic e render; produto/embalagem frequentemente exigem correção humana.
+- Para exports do backend `motion-matte-v1`, aplique também a [checklist específica da receita](../video-ad-motion/SKILL.md#checklist-específica-defeitos-medidos-na-v5): legenda embaralhada, lettering fora da margem, halo/vazamento da máscara, flash entre plates, sílaba comida no corte, CTA sobre mão/produto. Ao recomendar correção, preserve a linguagem da v5 (lettering gigante, legenda embaixo, corte no meio da frase); a revisão das v6/v7 corrigiu medidas e piorou a peça.
 
 A pesquisa e os screenshots não constituem autorização para reutilizar vídeos, rostos, marcas, música ou texturas em uma campanha. Transcrições automáticas e SRTs completos são rascunhos até conferência por escuta.
 

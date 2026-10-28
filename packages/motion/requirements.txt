@@ -1,0 +1,7 @@
+# Python 3.12. Versões resolvidas em 2026-10-28 e usadas na verificação contra a v5 (ver README).
+numpy==2.5.4
+opencv-python-headless==5.0.0.93
+pillow==13.0.0
+scipy==1.18.1
+torch==2.14.1
+torchvision==0.29.1

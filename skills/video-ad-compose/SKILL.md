@@ -13,12 +13,13 @@ Entregue composições editáveis e reproduzíveis, usando o que o repositório 
 - [Contrato e limites do renderer](../../packages/video/README.md) e [implementação](../../packages/video/index.js): leia os campos relevantes à composição. A implementação define a capacidade real.
 - [Exemplo vertical](../../packages/video/examples/demo.json) e [variação quadrada](../../packages/video/examples/demo-variant.json): use como ponto de partida, sem preservar copy ou identidade fictícia por acidente.
 - [Registro dos projetos](../../projects/README.md) e [interface](../../web/README.md): para expor versões salvas no Studio.
-- Para justificar o workflow, consulte [workflow de composição](../../research/ai-video-ads/workflows/05-agente-animatic-remotion.md) e [review das referências](../../research/ai-video-editing/video-review/README.md). Uma técnica observada num vídeo não prova que existe no renderer local.
+- Para justificar o workflow, consulte o [resumo da pesquisa](../../docs/research/README.md); com o checkout original, a pesquisa completa está em `research/` (local, fora do Git). Uma técnica observada num vídeo não prova que existe no renderer local.
 
 ## Escolher o backend da variante
 
-O repositório contém três backends distintos. Registre a escolha e não converta silenciosamente contratos:
+O repositório contém quatro backends distintos. Registre a escolha e não converta silenciosamente contratos:
 
+- **Motion matte (`motion-matte-v1`) em `packages/motion`:** talking head real → jump cuts pela transcrição, pessoa recortada (RVM) e descida, lettering gigante atrás da cabeça, plates de marca e de IA, legenda, SFX e CTA. É o motor do exemplo do README e o **padrão para editar vídeo de fala**. Siga a receita [video-ad-motion](../video-ad-motion/SKILL.md) e o contrato em `packages/motion/README.md`; o manifest fica em `projects/<id>/edits/<variante>.motion.json`.
 - Canvas e `encode-frames.js`: contrato de layers abaixo, componentes do catálogo e captura prévia pelo `renderFrame`.
 - FFmpeg V1 em `scripts/render-footage.py`: fonte real, cortes e voz, captions/overlays estáticos via Pillow. Veja `scripts/render-footage.md`; `--validate-only` valida a timeline específica.
 - Remotion V2 em `packages/remotion`: React motion, footage e áudio na mesma composição usada pelo Remotion Studio e pelo render. Leia `../remotion-best-practices/SKILL.md` e referências pertinentes; consulte `packages/remotion/README.md`. A skill oficial foi vendorizada com proveniência em `../remotion-best-practices/PROVENANCE.md`.

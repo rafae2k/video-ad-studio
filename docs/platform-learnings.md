@@ -1,10 +1,10 @@
 # Aprendizados para a plataforma de anúncios em vídeo
 
-Síntese da pesquisa de 19/10/2026 em [research/ai-video-production-lifecycle/](../research/ai-video-production-lifecycle/README.md). Cada item diz de onde vem e quanto confiar. **Inferência** = conclusão minha ou dos agentes a partir das fontes, não afirmação delas. Nada aqui foi implementado ou testado no repo.
+Síntese da pesquisa de 19/10/2026 (fora do Git; resumo público em [docs/research](research/README.md)) em `research/ai-video-production-lifecycle/README.md` (local). Cada item diz de onde vem e quanto confiar. **Inferência** = conclusão minha ou dos agentes a partir das fontes, não afirmação delas. Nada aqui foi implementado ou testado no repo.
 
 ## Princípios de desenho
 
-1. **Gates humanos onde há julgamento.** Todas as fases têm uma lista "IA faz" e outra "humano decide" em [ciclo.md](../research/ai-video-production-lifecycle/ciclo.md). O humano decide: qual dor a marca pode prometer, quais conceitos são realmente diferentes, cada claim, ritmo e gosto, qual take é a melhor, o que matar e o que escalar, e a aprovação da versão exata do arquivo. Combina com a regra de `finals[]` do [AGENTS.md](../AGENTS.md). *Confiança: média — síntese dos agentes.*
+1. **Gates humanos onde há julgamento.** Todas as fases têm uma lista "IA faz" e outra "humano decide" em ciclo.md (`research/ai-video-production-lifecycle/ciclo.md`, local). O humano decide: qual dor a marca pode prometer, quais conceitos são realmente diferentes, cada claim, ritmo e gosto, qual take é a melhor, o que matar e o que escalar, e a aprovação da versão exata do arquivo. Combina com a regra de `finals[]` do [AGENTS.md](../AGENTS.md). *Confiança: média — síntese dos agentes.*
 2. **Hierarquia de decisão do corte vira checklist de QA.** Murch, *In the Blink of an Eye*: emoção 51%, história 23%, ritmo 10%, eye-trace 7% (li o trecho original). Não substitui olhar humano. *Confiança: alta para a fonte; aplicar a anúncio curto é inferência.*
 3. **Funil de variantes.** Baxter e Sixel triam o material em etapas e entregam ao diretor 2 ou 3 caminhos montados (entrevistas lidas). É o desenho natural de "variantes" por manifest. *Inferência para a plataforma.*
 4. **Os primeiros segundos pesam mais.** MrBeast (guia vazado, verificado pela Business Insider), Colin & Samir, TikTok Creative Codes e Hormozi convergem em: promessa igual à abertura, e refazer o hook antes do resto. Resultados são autodeclarados. *Confiança: média.*

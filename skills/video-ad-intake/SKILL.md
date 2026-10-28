@@ -29,7 +29,7 @@ Registre também `workInProgress: unknown | not_started | in_progress`, com evid
 
 ## Ouvir e transcrever
 
-- Se houver fala, reutilize uma transcrição existente vinculada à mesma fonte ou use o helper `research/ai-video-editing/video-review/scripts/transcribe_assemblyai.py`. Leia seu `--help` e implementação relevante antes de executá-lo; modelos e opções podem mudar.
+- Se houver fala, reutilize uma transcrição existente vinculada à mesma fonte ou use o helper `npm run transcribe` ([scripts/transcribe-assemblyai.py](../../scripts/transcribe-assemblyai.py)) com `--output-dir projects/<id>/intake/transcripts`. O `words[]` do JSON é a entrada direta do [backend motion](../../packages/motion/README.md). Leia seu `--help` e implementação relevante antes de executá-lo; modelos e opções podem mudar.
 - O helper faz dry run por padrão. `--prepare-only` extrai áudio local; `--submit` envia **apenas áudio** e pode gerar cobrança. Use `--submit` quando a autorização existente abranger o serviço e os arquivos atuais. Se não abranger, prepare localmente, continue a inspeção visual e peça somente a autorização faltante. A existência de chave não autoriza envio. Não envie o vídeo inteiro para obter transcrição.
 - Passe `--input` com arquivos explícitos e `--output-dir` do intake atual. O helper usa o nome-base para saídas: processe fontes de nomes iguais em diretórios separados. Nunca mostre a chave de `.env`.
 - Preserve JSON bruto com palavras e timestamps em milissegundos, texto e SRT. Registre provider/model, ID do job e condição de revisão. Em timeout, retome o job salvo; não dispare outra transcrição paga como retry automático.
@@ -69,13 +69,13 @@ reuseCandidates[]: id, segmentIds[], technique, existingComponentId?,
 
 Cada entrada de evidência deve permitir chegar ao frame, trecho ou documento que a suporta. Use referências relativas dentro do artefato quando possível. Não inclua credenciais, URLs temporárias de upload nem tokens em manifests compartilhados. Preserve IDs e timestamps de origem ao relacionar transcrição e cenas; não rebaseie silenciosamente um corte para tempo zero.
 
-Para um projeto, prefira `projects/<project-id>/intake/`; para estudo de referências sem projeto, siga a organização existente em `research/ai-video-editing/video-review/` (`videos/`, `screenshots/`, `transcripts/`). Produza um resumo legível por vídeo e o manifest estruturado. Vincule os arquivos existentes em vez de duplicar mídia pesada. Não use vídeos de terceiros da pesquisa como assets demonstrativos de um anúncio exportável sem evidência de direitos.
+Para um projeto, prefira `projects/<project-id>/intake/`; para estudo de referências sem projeto, siga a organização existente em `research/ai-video-editing/video-review/` (`videos/`, `screenshots/`, `transcripts/`), que é local e fica fora do Git porque contém material de terceiros. Produza um resumo legível por vídeo e o manifest estruturado. Vincule os arquivos existentes em vez de duplicar mídia pesada. Não use vídeos de terceiros da pesquisa como assets demonstrativos de um anúncio exportável sem evidência de direitos.
 
 O handoff deve informar: fontes analisadas, cobertura visual/sonora real, padrões reutilizáveis, candidatos já existentes na biblioteca, lacunas que afetam o próximo passo e caminhos dos artefatos. A análise termina com sugestões rastreáveis; escolha editorial e geração seguem o pedido atual do usuário.
 
 ## Contexto do repo
 
-Consulte apenas quando necessário:
+Consulte apenas quando necessário. O [resumo público](../../docs/research/README.md) sempre está disponível; os caminhos `research/` abaixo existem só no checkout original:
 
 - `research/ai-video-editing/video-review/README.md`: índice de referências já analisadas.
 - `research/ai-video-editing/video-review/videos/joshuablatch_1791893532_4005694180745129840_6733619072.md`: oportunidade vinculada à transcrição e busca de reutilização no catálogo.

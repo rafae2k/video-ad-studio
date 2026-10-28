@@ -13,7 +13,7 @@ Para cada conceito, anote o problema/mensagem do brief, o trecho que inspirou ri
 
 Use um hook que caiba no tempo e uma progressão curta de cenas. Esboce fala ou texto por beat, com duração estimada, imagem requerida, elemento da biblioteca e CTA. Faça 2–3 direções quando a escolha entre elas for útil. Evite gerar combinações de hooks e CTAs sem um corpo que já faça sentido. Para produto sensível a rótulo, prefira foto/packshot aprovado e overlay editável; não planeje texto crítico desenhado por modelo de vídeo.
 
-Antes de propor VFX novo, procure ID ou comportamento semelhante no catálogo. Distinga `exists` (executa no renderer), `candidate` (observado na pesquisa, ainda não implementado) e `external` (depende de editor/provedor). A interface mostra ideias em rascunho, mas seu `localStorage` não atualiza `ideas.json` automaticamente.
+Quando a fonte é um vídeo de fala, a direção padrão (`exists`) é a receita [video-ad-motion](../video-ad-motion/SKILL.md): jump cuts, pessoa descida, lettering gigante atrás da cabeça e fundos que mudam com o assunto. Para cada beat, proponha a palavra do lettering (eco literal da fala), o tipo de fundo (`orig`, `dark`, still/clipe de IA, asset da marca) e o prompt de IA necessário. Antes de propor VFX novo, procure ID ou comportamento semelhante no catálogo. Distinga `exists` (executa no renderer), `candidate` (observado na pesquisa, ainda não implementado) e `external` (depende de editor/provedor). A interface mostra ideias em rascunho, mas seu `localStorage` não atualiza `ideas.json` automaticamente.
 
 ## Handoff em `ideas.json`
 
@@ -23,5 +23,5 @@ Confira JSON válido e entregue um resumo comparável das direções, inclusive 
 
 ## Evidências úteis deste repo
 
-- `research/ai-video-editing/video-review/README.md`: padrão transcrição → oportunidades de motion → preview → módulo, observado nos vídeos fornecidos; o código e o throughput do creator não foram verificados.
-- `research/ai-video-ads/README.md`: keyframes e animatic antes de vídeo caro, variações de hook/CTA com corpo comum e gates humanos; a recomendação é inferência da pesquisa, não benchmark deste produto.
+- [Resumo da pesquisa](../../docs/research/README.md): padrão transcrição → oportunidades de motion → preview → módulo, e o histórico de qual direção foi aprovada ou rejeitada no exemplo do README.
+- `research/ai-video-editing/video-review/README.md` e `research/ai-video-ads/README.md` (locais, fora do Git): análises por clipe; keyframes e animatic antes de vídeo caro, variações de hook/CTA com corpo comum e gates humanos. A recomendação é inferência da pesquisa, não benchmark deste produto.

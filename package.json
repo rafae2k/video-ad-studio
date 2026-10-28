@@ -9,6 +9,9 @@
     "check": "node --check web/app.js && node --test scripts/*.test.mjs web/*.test.mjs && npm --prefix packages/video test",
     "remotion:studio": "npm --prefix packages/remotion run studio",
     "remotion:render": "node packages/remotion/render-v2.mjs",
-    "remotion:check": "npm --prefix packages/remotion run check"
+    "remotion:check": "npm --prefix packages/remotion run check",
+    "motion": "uv run --python 3.12 --with-requirements packages/motion/requirements.txt python packages/motion/motion.py",
+    "motion:test": "uv run --python 3.12 --with-requirements packages/motion/requirements.txt python -m unittest discover -s packages/motion -p \"test_*.py\"",
+    "transcribe": "python3 scripts/transcribe-assemblyai.py"
   }
 }

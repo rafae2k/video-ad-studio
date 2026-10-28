@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "manifest": "packages/motion/examples/v5-surf.motion.json",
+  "note": "Arquivos ficam em storage/ (fora do Git). Hashes conferidos em 2026-10-28; são os mesmos usados no render da v5.",
+  "assets": [
+    {
+      "path": "storage/assets/ai-generated/cells.mp4",
+      "sha256": "18caad3a5bb25e51f0a6fa20f3a1cde8ba767ba7d44e992b608d24e8591327e6",
+      "media": {
+        "width": 720,
+        "height": 1280,
+        "fps": "24/1",
+        "duration": 5.042
+      },
+      "role": "ai_generated",
+      "provider": "Magnific (Freepik) via MCP",
+      "tool": "video_generate",
+      "model": "bytedance-seedance-fast-2.0",
+      "params": {
+        "aspectRatio": "9:16",
+        "duration": 5,
+        "resolution": "720p",
+        "withSoundEffects": false
+      },
+      "prompt": "Cinematic macro microscope view of human cells in deep navy darkness. Small red-orange reactive particles drift toward a translucent cell, then glowing lime-green antioxidant molecules swirl in and form a protective shield around it, neutralizing the particles with soft sparks. Shallow depth of field, slow push-in, photorealistic, no text.",
+      "generatedAt": "2026-10-19",
+      "rightsStatus": "owned",
+      "rightsEvidence": "gerado pela conta Magnific da marca; conferir termos do provedor antes de veicular"
+    },
+    {
+      "path": "storage/assets/ai-generated/chlorella.png",
+      "sha256": "e6c92561c4492b877a06195548be182f0e17cbc11532d7a6b82ae1d5aa7bee9f",
+      "media": {
+        "width": 1152,
+        "height": 2048
+      },
+      "role": "ai_generated",
+      "provider": "Magnific (Freepik) via MCP",
+      "tool": "images_generate",
+      "model": "padrão do images_generate (sem slug)",
+      "params": {
+        "aspectRatio": "9:16",
+        "count": 1
+      },
+      "prompt": "Macro photograph of chlorella: bright green microalgae tablets and green liquid splash on a dark surface, dramatic light, no text",
+      "generatedAt": "2026-10-19",
+      "rightsStatus": "owned",
+      "rightsEvidence": "gerado pela conta Magnific da marca; conferir termos do provedor antes de veicular"
+    },
+    {
+      "path": "storage/assets/ai-generated/coq10.png",
+      "sha256": "c3f4e94c24946c448a7d5f62d2fd737cfa6b8c36eb71d4e3e5b63cda558adeb7",
+      "media": {
+        "width": 1152,
+        "height": 2048
+      },
+      "role": "ai_generated",
+      "provider": "Magnific (Freepik) via MCP",
+      "tool": "images_generate",
+      "model": "padrão do images_generate (sem slug)",
+      "params": {
+        "aspectRatio": "9:16",
+        "count": 1
+      },
+      "prompt": "Glowing golden orange softgel capsules floating with energy light trails, dark background, macro studio shot, no text",
+      "generatedAt": "2026-10-19",
+      "rightsStatus": "owned",
+      "rightsEvidence": "gerado pela conta Magnific da marca; conferir termos do provedor antes de veicular"
+    },
+    {
+      "path": "storage/assets/ai-generated/grapes.png",
+      "sha256": "bb405b9eeb93b0125ad3278dd10a3d94f3065b90e56fd236681ffe1b374efbdc",
+      "media": {
+        "width": 1152,
+        "height": 2048
+      },
+      "role": "ai_generated",
+      "provider": "Magnific (Freepik) via MCP",
+      "tool": "images_generate",
+      "model": "padrão do images_generate (sem slug)",
+      "params": {
+        "aspectRatio": "9:16",
+        "count": 1
+      },
+      "prompt": "Macro photograph of dark red grapes with water droplets and a splash of red wine, black background, rim light, no text",
+      "generatedAt": "2026-10-19",
+      "rightsStatus": "owned",
+      "rightsEvidence": "gerado pela conta Magnific da marca; conferir termos do provedor antes de veicular"
+    },
+    {
+      "path": "storage/assets/ai-generated/spirulina.png",
+      "sha256": "f11a252d6e2b39ffd22b1827c102d521ce8cfd3f002ac6f215d02e60e77e5c0c",
+      "media": {
+        "width": 1152,
+        "height": 2048
+      },
+      "role": "ai_generated",
+      "provider": "Magnific (Freepik) via MCP",
+      "tool": "images_generate",
+      "model": "padrão do images_generate (sem slug)",
+      "params": {
+        "aspectRatio": "9:16",
+        "count": 1
+      },
+      "prompt": "Macro photograph of spirulina: vivid deep-green algae powder swirling in clear water, dark moody background, studio lighting, no text",
+      "generatedAt": "2026-10-19",
+      "rightsStatus": "owned",
+      "rightsEvidence": "gerado pela conta Magnific da marca; conferir termos do provedor antes de veicular"
+    },
+    {
+      "path": "storage/assets/ai-generated/surfer.mp4",
+      "sha256": "12b01f3f2f9180c5a23d678c2a8b2bea8585b95805de02b4da90283a73064292",
+      "media": {
+        "width": 720,
+        "height": 1280,
+        "fps": "24/1",
+        "duration": 5.042
+      },
+      "role": "ai_generated",
+      "provider": "Magnific (Freepik) via MCP",
+      "tool": "video_generate",
+      "model": "bytedance-seedance-fast-2.0",
+      "params": {
+        "aspectRatio": "9:16",
+        "duration": 5,
+        "resolution": "720p",
+        "withSoundEffects": false
+      },
+      "prompt": "Fit elderly man in his seventies with a short silver beard surfing a clean blue wave at golden hour, confident stance, smiling, spray catching the light. Smooth tracking shot from the side, realistic documentary look, no text, no logos.",
+      "generatedAt": "2026-10-19",
+      "rightsStatus": "owned",
+      "rightsEvidence": "gerado pela conta Magnific da marca; conferir termos do provedor antes de veicular"
+    },
+    {
+      "path": "storage/assets/ai-generated/vitc.png",
+      "sha256": "7b90a59f9562f8276f1968d5d7629da1f42fcf3aa47b2158ddc697f0e5ad856a",
+      "media": {
+        "width": 1152,
+        "height": 2048
+      },
+      "role": "ai_generated",
+      "provider": "Magnific (Freepik) via MCP",
+      "tool": "images_generate",
+      "model": "padrão do images_generate (sem slug)",
+      "params": {
+        "aspectRatio": "9:16",
+        "count": 1
+      },
+      "prompt": "Fresh orange slices exploding in a juice splash, vivid colors, dark background, macro studio shot, no text",
+      "generatedAt": "2026-10-19",
+      "rightsStatus": "owned",
+      "rightsEvidence": "gerado pela conta Magnific da marca; conferir termos do provedor antes de veicular"
+    },
+    {
+      "path": "storage/assets/nuture-lp/hero-kit-black.webp",
+      "sha256": "24e7163b88f32a1d158ef9872873a98738a8bea5e62b3b11343a9d27288fee76",
+      "media": {
+        "width": 1600,
+        "height": 900
+      },
+      "role": "brand_asset",
+      "provider": "nuture.com.br (landing page da marca)",
+      "rightsStatus": "owned",
+      "rightsEvidence": "asset da própria marca, baixado da LP pública; não redistribuído neste repositório"
+    },
+    {
+      "path": "storage/assets/nuture-lp/lp_video_3.mp4",
+      "sha256": "cf06acc0f56149d77d054d967ee16f31f63e8690425627725dd581dbf06dfb4c",
+      "media": {
+        "width": 1080,
+        "height": 1080,
+        "fps": "30/1",
+        "duration": 4.667
+      },
+      "role": "brand_asset",
+      "provider": "nuture.com.br (landing page da marca)",
+      "rightsStatus": "owned",
+      "rightsEvidence": "asset da própria marca, baixado da LP pública; não redistribuído neste repositório"
+    },
+    {
+      "path": "storage/assets/nuture-lp/nuture_daily_boost_still_1200x1200_28db23e7-1497-4a4c-9d21-21ea80160535.webp",
+      "sha256": "0bd132d26867cd3618ad9405e55e3f3b82fcdf0ff43bc9f8588ec025a5989997",
+      "media": {
+        "width": 1200,
+        "height": 1200
+      },
+      "role": "brand_asset",
+      "provider": "nuture.com.br (landing page da marca)",
+      "rightsStatus": "owned",
+      "rightsEvidence": "asset da própria marca, baixado da LP pública; não redistribuído neste repositório"
+    }
+  ]
+}

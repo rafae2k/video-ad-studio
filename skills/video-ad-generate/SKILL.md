@@ -5,7 +5,7 @@ description: Preparar e acompanhar geração de imagens, takes curtos, voz ou av
 
 # Gerar mídia para anúncios com controle de produção
 
-Trate a geração como uma fonte versionada para edição. Leia `WORKFLOW.md`, o brief, a ideia e os assets do projeto. Escolha o fluxo apropriado ao pedido: UGC real com edição assistida, avatar para fala, ou produto/ambiente com keyframe e image-to-video. `research/ai-video-ads/workflows/01-ugc-hibrido.md`, `02-ugc-avatar.md` e `03-produto-keyframe-i2v.md` descrevem os três fluxos pesquisados; nenhum é uma integração já instalada neste repo.
+Trate a geração como uma fonte versionada para edição. Leia `WORKFLOW.md`, o brief, a ideia e os assets do projeto. Escolha o fluxo apropriado ao pedido: UGC real com edição assistida (inclusive cutaways e stills de apoio para a receita [video-ad-motion](../video-ad-motion/SKILL.md)), avatar para fala, ou produto/ambiente com keyframe e image-to-video. O [resumo da pesquisa](../../docs/research/README.md) descreve os três fluxos; nenhum é uma integração instalada neste repo.
 
 ## Preparar antes de uma chamada paga
 
@@ -27,7 +27,22 @@ Aceitar somente se: [critérios visuais e de continuidade]; rejeitar se [defeito
 
 O último campo é um checklist de seleção, não uma promessa de que o modelo evitará defeitos. Preserve versão do prompt e do keyframe para comparar tentativas.
 
-Anote provedor, modelo/versão, endpoint ou interface, parâmetros, seed quando disponível, custo estimado por tentativa, teto de gasto e autorização da chamada. Consulte preço e capacidade atuais na documentação oficial antes de orçar ou executar, pois mudam. O pedido atual ou autorização anterior pode abranger geração paga; uma API key em `.env`, sozinha, não a autoriza. O repo não possui adaptador de geração de vídeo: não represente um prompt ou job planejado como arquivo produzido pelo Studio.
+Anote provedor, modelo/versão, endpoint ou interface, parâmetros, seed quando disponível, custo estimado por tentativa, teto de gasto e autorização da chamada. Consulte preço e capacidade atuais na documentação oficial antes de orçar ou executar, pois mudam. O pedido atual ou autorização anterior pode abranger geração paga; uma API key em `.env`, sozinha, não a autoriza. O repo não possui adaptador de geração de vídeo; a geração acontece no provedor externo (ex.: Magnific via MCP, abaixo). Não represente um prompt ou job planejado como arquivo produzido pelo Studio.
+
+## Magnific (Freepik) via MCP — caminho usado na v5
+
+Os assets de IA do [exemplo do README](../../README.md#exemplo) vieram do conector MCP "Magnific / Freepik — Assets Generation", e não de código do repositório. Sem esse conector na sessão, não há geração; prepare os prompts e peça o arquivo.
+
+1. `account_balance` e `simulate_cost` com os mesmos argumentos da chamada real. Registre o custo estimado e confira se a autorização cobre o total.
+2. `video_models_list` / `images_models_list` quando o modelo da receita não estiver disponível.
+3. `video_generate` ou `images_generate`, uma cena por chamada. Depois `creations_wait`, e em timeout `creations_get` do mesmo ID, sem reenviar.
+4. Baixe para `storage/assets/ai-generated/<projeto>/`, calcule SHA-256, rode FFprobe e registre prompt, modelo, parâmetros, data e ID, como em [v5-surf.assets.json](../../packages/motion/examples/v5-surf.assets.json).
+
+Parâmetros que funcionaram na receita [video-ad-motion](../video-ad-motion/SKILL.md):
+
+- **Cutaway em vídeo:** `slug: bytedance-seedance-fast-2.0`, `duration: 5`, `aspectRatio: 9:16`, `resolution: 720p`, `withSoundEffects: false`. Sai a 24 fps, e o compositor usa ~1,5–2 s. O prompt descreve sujeito, ação, um movimento de câmera e o look, e termina em "no text, no logos". Exemplo: "Fit elderly man in his seventies with a short silver beard surfing a clean blue wave at golden hour … Smooth tracking shot from the side, realistic documentary look, no text, no logos."
+- **Still de ingrediente:** `images_generate` com `aspectRatio: 9:16` e `count: 1` (1152×2048). O padrão é "Macro photograph of [ingrediente]: [forma] [ação], dark background, [luz], no text". O fundo escuro mantém o lettering legível e o compositor ainda aplica `dim`.
+- **Embalagem real, nunca gerada.** Na v6, um packshot de IA deformou o logo e inventou microtexto no rótulo. Para produto, use still ou vídeo da marca.
 
 ## Gate e execução
 
